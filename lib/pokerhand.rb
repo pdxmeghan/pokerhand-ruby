@@ -42,6 +42,7 @@ sorted_num_array = []
     suit_hash[element] += 1
   end
 
+
   if doubles.length == 2 && doubles.has_value?(3)
     results << "full house"
   elsif doubles.length == 3 && doubles.has_value?(3)
@@ -52,6 +53,8 @@ sorted_num_array = []
     results << "four of a kind"
   elsif doubles.length == 3 && doubles.has_value?(2)
     results << "two pair"
+  elsif (((sorted[4].to_i) - (sorted[0].to_i) + 1)) == 5 && suit_hash.length == 1 && sorted[0].to_i == 10
+    results << "royal flush"
   elsif (((sorted[4].to_i) - (sorted[0].to_i) + 1) == 5) && (suit_hash.length == 1 && suit_hash.has_value?(5))
     results << "straight flush"
   elsif((sorted[4].to_i) - (sorted[0].to_i) + 1) == 5

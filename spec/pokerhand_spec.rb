@@ -32,4 +32,7 @@ describe('pokerhand') do
   it("returns 'flush'") do
     pokerhand(["AS", "JS", "10S", "6S", "7S"]).should(eq('flush'))
   end
+  it("returns 'royal flush'") do
+    pokerhand(["AH", "KH", "QH", "10H", "JH"]).should(eq('royal flush'))
+  end
 end
