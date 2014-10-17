@@ -23,7 +23,8 @@ def pokerhand(cards)
     end
   end
 
-sorted_num_array = []
+  sorted_num_array = []
+  
   num_array.each do |i|
     sorted_num_array << i.to_i
   end
